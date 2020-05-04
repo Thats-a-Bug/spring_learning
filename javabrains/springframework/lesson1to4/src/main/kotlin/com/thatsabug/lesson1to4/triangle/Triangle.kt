@@ -2,19 +2,19 @@ package com.thatsabug.lesson1to4.triangle
 
 class Triangle {
 
-    private var pointA: String = ""
-    private var pointB: String = ""
-    private var pointC: String = ""
+    private lateinit var pointA: Point
+    private lateinit var pointB: Point
+    private lateinit var pointC: Point
 
-    fun setPointA(pointA: String) {
+    fun setPointA(pointA: Point) {
         this.pointA = pointA
     }
 
-    fun setPointB(pointB: String) {
+    fun setPointB(pointB: Point) {
         this.pointB = pointB
     }
 
-    fun setPointC(pointC: String) {
+    fun setPointC(pointC: Point) {
         this.pointC = pointC
     }
 
