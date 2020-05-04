@@ -1,4 +1,4 @@
-package com.thatsabug.lesson1to4
+package com.thatsabug.lesson1to4.helloworld
 
 class HelloWorld {
     private var message: String = ""
@@ -7,7 +7,5 @@ class HelloWorld {
         this.message = message
     }
 
-    fun getMessage() {
-        println("Your Message : $message")
-    }
+    fun getMessage() = "Your Message : $message"
 }
