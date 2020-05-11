@@ -9,7 +9,7 @@
         <constructor-arg value = "Equilateral" />
     </bean>
 
-    <bean id = "pointA" class = "com.thatsabug.lesson1to4.triangle.Point">
+    <bean id = "pointA" scope="prototype" class = "com.thatsabug.lesson1to4.triangle.Point">
         <property name = "x" value = "20" />
         <property name = "y" value = "10" />
     </bean>

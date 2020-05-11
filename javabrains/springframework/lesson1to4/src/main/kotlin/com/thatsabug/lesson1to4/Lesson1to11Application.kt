@@ -12,14 +12,14 @@ fun main() {
 	`print the triangle`()
 }
 
-fun `print the triangle`() {
+private fun `print the triangle`() {
 	val context = `get context`("triangle.xml")
 	`print triangle`(context)
 	`print polygon`(context)
 	`verify prototype triangle`(context)
 }
 
-fun `verify prototype triangle`(context: ClassPathXmlApplicationContext) {
+private fun `verify prototype triangle`(context: ClassPathXmlApplicationContext) {
 	val triangle1 = context.getBean("trianglePrototype") as Triangle
 	val triangle2 = context.getBean("trianglePrototype") as Triangle
 	check(triangle1 != triangle2)
@@ -30,12 +30,12 @@ fun `verify prototype triangle`(context: ClassPathXmlApplicationContext) {
 
 }
 
-fun `print polygon`(context: ClassPathXmlApplicationContext) {
+private fun `print polygon`(context: ClassPathXmlApplicationContext) {
 	val obj = context.getBean("polygon") as Polygon
 	println(obj)
 }
 
-fun `print triangle`(context: ClassPathXmlApplicationContext) {
+private fun `print triangle`(context: ClassPathXmlApplicationContext) {
 	val obj = context.getBean("triangle") as Triangle
 	println(obj.getCoordinates())
 	println(obj.getType())
