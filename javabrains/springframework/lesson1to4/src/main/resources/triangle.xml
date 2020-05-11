@@ -7,14 +7,14 @@
 
     <bean id = "triangle" class = "com.thatsabug.lesson1to4.triangle.Triangle">
         <constructor-arg value = "Equilateral" />
-        <property name = "pointA" ref = "pointA"/>
+        <property name = "pointA">
+            <bean id = "innerPointA" class = "com.thatsabug.lesson1to4.triangle.Point">
+                <property name = "x" value = "300" />
+                <property name = "y" value = "10" />
+            </bean>
+        </property>
         <property name = "pointB" ref = "pointB"/>
         <property name = "pointC" ref = "pointC"/>
-    </bean>
-
-    <bean id = "pointA" class = "com.thatsabug.lesson1to4.triangle.Point">
-        <property name = "x" value = "30" />
-        <property name = "y" value = "10" />
     </bean>
 
     <bean id = "pointB" class = "com.thatsabug.lesson1to4.triangle.Point">
