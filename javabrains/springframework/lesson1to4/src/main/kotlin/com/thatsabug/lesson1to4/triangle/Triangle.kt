@@ -1,6 +1,6 @@
 package com.thatsabug.lesson1to4.triangle
 
-class Triangle {
+class Triangle (private val type: String) {
 
     private lateinit var pointA: Point
     private lateinit var pointB: Point
@@ -20,4 +20,6 @@ class Triangle {
 
     fun getCoordinates() =
             "PointA: $pointA, Point B: $pointB, Point C: $pointC"
+
+    fun getType() = "Type: $type"
 }

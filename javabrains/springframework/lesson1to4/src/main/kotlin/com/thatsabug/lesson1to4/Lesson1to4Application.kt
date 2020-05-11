@@ -15,6 +15,7 @@ fun `print the triangle`() {
 	val context = `get context`("triangle.xml")
 	val obj = context.getBean("triangle") as Triangle
 	println(obj.getCoordinates())
+	println(obj.getType())
 }
 
 private fun `say hello world`() {
