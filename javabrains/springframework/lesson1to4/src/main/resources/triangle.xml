@@ -34,6 +34,9 @@
                 <ref bean="pointA"/>
             </list>
         </property>
+    </bean>
 
+    <bean id = "trianglePrototype" class = "com.thatsabug.lesson1to4.triangle.Triangle" scope="prototype" autowire="byName">
+        <constructor-arg value = "Equilateral" />
     </bean>
 </beans>
